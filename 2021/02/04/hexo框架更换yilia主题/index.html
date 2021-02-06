@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>hexo框架更换yilia主题 | Lin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在前面的文章中，搭建好了hexo博客框架之后，按照视频教程了，将hexo默认的框架主题改为yilia主题，主题是大家根据个人的喜好来更换的，接下来就更换yilia主题的过程以及yilia主题的一些个性化的配置。">
+  <meta name="description" content="在前面的文章中，搭建好了hexo博客框架之后，一开始是hexo的默认的主题，可能大家有些不喜欢这个默认主题，那么，接下来就是我将默认主题更换成yilia主题的过程(大家也可以根据自己喜欢，选择别的更换别的主题)，还有更换了yilia主题后,一些基本的个性化设置。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo框架更换yilia主题">
 <meta property="og:url" content="http://example.com/2021/02/04/hexo%E6%A1%86%E6%9E%B6%E6%9B%B4%E6%8D%A2yilia%E4%B8%BB%E9%A2%98/index.html">
 <meta property="og:site_name" content="Lin的博客">
-<meta property="og:description" content="在前面的文章中，搭建好了hexo博客框架之后，按照视频教程了，将hexo默认的框架主题改为yilia主题，主题是大家根据个人的喜好来更换的，接下来就更换yilia主题的过程以及yilia主题的一些个性化的配置。">
+<meta property="og:description" content="在前面的文章中，搭建好了hexo博客框架之后，一开始是hexo的默认的主题，可能大家有些不喜欢这个默认主题，那么，接下来就是我将默认主题更换成yilia主题的过程(大家也可以根据自己喜欢，选择别的更换别的主题)，还有更换了yilia主题后,一些基本的个性化设置。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-04T05:31:03.000Z">
-<meta property="article:modified_time" content="2021-02-04T14:12:20.226Z">
+<meta property="article:modified_time" content="2021-02-04T14:22:23.692Z">
 <meta property="article:author" content="佳雨初林">
 <meta property="article:tag" content="个人技术博客">
 <meta name="twitter:card" content="summary">
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在前面的文章中，搭建好了hexo博客框架之后，按照视频教程了，将hexo默认的框架主题改为yilia主题，主题是大家根据个人的喜好来更换的，接下来就更换yilia主题的过程以及yilia主题的一些个性化的配置。</p>
+        <p>在前面的文章中，搭建好了hexo博客框架之后，一开始是hexo的默认的主题，可能大家有些不喜欢这个默认主题，那么，接下来就是我将默认主题更换成yilia主题的过程(大家也可以根据自己喜欢，选择别的更换别的主题)，还有更换了yilia主题后,一些基本的个性化设置。</p>
 <a id="more"></a>
 <h2 id="更换yilia主题"><a href="#更换yilia主题" class="headerlink" title="更换yilia主题"></a>更换yilia主题</h2><h3 id="下载yilia主题"><a href="#下载yilia主题" class="headerlink" title="下载yilia主题"></a>下载yilia主题</h3><p>首先在你的blog文件下面，打开Git Bash,在命令行窗口中输入如下命令行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
@@ -194,7 +194,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Lin的博客</span><br><span class="line">author: 佳雨初林</span><br><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
 <p>保存之后，还是和前面一样，重新生成一次，在本地4000端口查看效果！</p>
 <h3 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h3><p>设置博客的头像，可以在yilia下的source文件夹中新建一个assets的文件夹，用来存放头像图片及一些其他图片，将要选择的头像文件自行命名存储在assets文件夹下。接下来打开yilia的配置文件_config.yml，在里面找到avatar，进行如下编辑：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: &#x2F;assets&#x2F;picture&#39;name.jpg(png)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: &#x2F;assets&#x2F;name.jpg(png)</span><br></pre></td></tr></table></figure>
 <p><strong>大家要注意，后面是跟上图片的名称以及尾缀</strong>，yilia主题中插入其他图片也是一样的(例如插入打赏中的个人支付宝照片或者是其他的)</p>
 <p>可以重复前面的生成，在本地4000端口预览后，推送到GitHub中。</p>
 
@@ -289,6 +289,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/02/05/%E5%88%A9%E7%94%A8github%E8%BD%AC%E5%82%A8%E5%9B%BE%E7%89%87%E7%94%A8%E4%BA%8EMarkdown/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          利用github转储图片用于Markdown
+        
+      </div>
+    </a>
   
   
     <a href="/2021/01/31/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
