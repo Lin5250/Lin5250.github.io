@@ -16,7 +16,7 @@
 <meta property="og:description" content="这个是我搭建hexo框架之后写的第一篇博客，想和大家分享一下自己搭建的过程。我搭建博客的过程参考了CodeSheep的教学视频，但是其中有一些区别，CodeSheep使用的是mac系统，而我的系统是windows系统，所以在搭建的时候还参考了基于windows的教学视频。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-31T07:17:11.000Z">
-<meta property="article:modified_time" content="2021-01-31T15:43:10.686Z">
+<meta property="article:modified_time" content="2021-03-01T12:41:13.605Z">
 <meta property="article:author" content="佳雨初林">
 <meta property="article:tag" content="个人技术博客">
 <meta name="twitter:card" content="summary">
@@ -183,17 +183,20 @@
 <a id="more"></a>
 <h2 id="软件的准备"><a href="#软件的准备" class="headerlink" title="软件的准备"></a>软件的准备</h2><h3 id="Git和Node-js的安装"><a href="#Git和Node-js的安装" class="headerlink" title="Git和Node.js的安装"></a>Git和Node.js的安装</h3><p>首先下载好<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a>和<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">Node.js</a>,要下载与自己电脑OS对应的软件包，之后安装Git和Node.js的过程一直选择默认就行(也可以根据自己的需要进行适当修改)。检测自己安装是否成功，右击鼠标，选择Git Bash (这个选项也是只有你安装好了git之后才会有的)，在出现的窗口中输入如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
+<p>查看node.js的版本：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
 <p>就会出现Git工具和Node.js的版本。</p>
 <h3 id="安装hexo框架"><a href="#安装hexo框架" class="headerlink" title="安装hexo框架"></a>安装hexo框架</h3><p>在安装hexo博客框架之前，利用npm来安装一个cnpm(是中国 npm 镜像的客户端),在Git Bash中输入如下代码(Git Bash任意位置打开都行)：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install cnpm -g --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 <p>等在安装完成后，敲击cnpm命令，回车后没有报错，就说明cnpm安装成功了。<br>接下来就是安装hexo框架，可以在任意的位置下新建一个blog文件，以后的操作都是基于blog文件夹下进行的，所以在搭建框架的过程中，出现了什么错误，都可以删除了blog文件夹重来。在blog目录下面，打开Git Bash，在窗口中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>此时正在安装hexo框架，大家耐心等待就好了（有可能网络不好，一直没有反应，耐心等待就好了），如梭下载失败重新输入命令行就好了。下载hexo框架之后，进行初始化，输入如下命令行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
 <p>安装完成之后，可以看见blog文件中生成了一些内容，接下来启动一下博客，输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>接下来窗口就会告诉你:Hexo is running at <code>http://localhost:4000</code>。在浏览器中输入：<code>http://localhost:4000</code>,跳转成功，恭喜你hexo框架搭建好了！！<br>大家要注意呀，在Git Bash窗口中复制的时候，<strong>不要Ctrl+C，而是要选择右击窗口，然后选择Copy</strong>，Ctrl+C会被识别成为停止在本地服务器运行，浏览器中就会出现无法访问此网站的提示</p>
 <h2 id="推送到Github"><a href="#推送到Github" class="headerlink" title="推送到Github"></a>推送到Github</h2><p>在个人的GitHub账户中新建一个仓库，仓库的命名要用GitHub的账户名字+github.io的样子来命名：Yourname.github.io(这个命名必须要按照这要求)，创建完成之后，仓库的SSH复制，进入到blog文件夹下打开_config.yml文件(可以用VScode来打开)，在文件中的最后面添加如下代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:...</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: (你新建仓库的SSH)</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>repo后面对应的是你的仓库的SSH Key，在仓库处复制就行了。<br></br><br>接下来在blog文件夹下面打开Git Bash，下载将hexo推送到git的插件，输入如下命令行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install --save hexo-deplory-git</span><br></pre></td></tr></table></figure>
 <p>下载完成之后，再输入命令行：</p>
